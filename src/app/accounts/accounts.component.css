@@ -1,0 +1,40 @@
+h1{
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+table{
+    width: 90%;
+    margin: auto;
+    border-collapse: collapse;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+thead{
+    background-color: #34495e;
+    color: white;
+}
+
+th, td{
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+th{
+    font-size: 16px;
+}
+
+tbody tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+
+tbody tr:hover{
+    background-color: #d6eaf8;
+}
+
+img{
+    border-radius: 50%;
+    object-fit: cover;
+}

@@ -13,6 +13,8 @@ import { BmiCalculatorComponent } from './bmi-calculator/bmi-calculator.componen
 import { EmployeeComponent } from './employee/employee.component';
 import { FlipkartComponent } from './flipkart/flipkart.component';
 import { VehiclesComponent } from './vehicles/vehicles.component';
+import { AccountsComponent } from './accounts/accounts.component';
+import { PrettyComponent } from './pretty/pretty.component';
 
 
 const routes: Routes = [
@@ -29,6 +31,8 @@ const routes: Routes = [
     {path:'employee',component:EmployeeComponent},
     {path:'flipkart',component:FlipkartComponent},
     {path:'vehicles',component:VehiclesComponent},
+    {path:'accounts',component:AccountsComponent},
+    {path:'pretty',component:PrettyComponent},
   ]}
 ];
 
