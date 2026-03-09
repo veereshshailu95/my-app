@@ -1,0 +1,8 @@
+.parent{
+    display: flex;
+    justify-content: space-evenly;
+}
+.left{
+    position: relative;
+    right:70px;
+}

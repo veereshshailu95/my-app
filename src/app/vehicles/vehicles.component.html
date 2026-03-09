@@ -1,0 +1,34 @@
+<table>
+    <thead>
+        <tr>
+            <th>vehicle</th>
+            <th>color</th>
+            <th>cost</th>
+            <th>fuel</th>
+            <th>id</th>
+            <th>manufacturer</th>
+            <th>model</th>
+            <th>type</th>
+            <th>tyres</th>
+            <th>image</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let ve of totalvehicle">
+            <!-- <td>{{i+1}}</td> -->
+            <td>{{ve.vehicle}}</td>
+            <td>{{ve.color}}</td>
+            <td>{{ve.cost}}</td>
+            <td>{{ve.fuel}}</td>
+            <td>{{ve.id}}</td>
+            <td>{{ve.manufacturer}}</td>
+            <td>{{ve.model}}</td>
+            <td>{{ve.type}}</td>
+            <td>{{ve.tyres}}</td>
+            <td>
+                <img src="{{ve.image}}" alt="" width="100px" height="100px;">
+            </td>
+        </tr>
+    </tbody>
+</table>

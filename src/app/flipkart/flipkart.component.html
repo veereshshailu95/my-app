@@ -1,0 +1,61 @@
+<div class="parent">
+    <div class="left">
+<input type="text" placeholder="search"[(ngModel)]="searchtext" (keyup)="search()">
+<button (click)="onlyfd()">only free delivery</button><br><br>
+<button (click)="pricehl()">exp low to high</button>
+<button (click)="pricelh()">exphigh to low</button>
+<button (click)="ratinghl()">rating low to high</button>
+<button (click)="ratinglh()">rating high to low</button><br><br>
+<button (click)="apply()">Apply 50% discount</button>
+<button (click)="charges()">price with delivery charges</button><br><br>
+<button (click)="total()">total price</button>
+<p>{{user}}</p>
+<button (click)="cart()">Total cart items</button>
+</div>
+<div class="right">
+    <label for="">Name:</label>
+    <input type="text"[(ngModel)]="name"><br><br>
+
+    <label for="">Price:</label>
+    <input type="text" [(ngModel)]="price"><br><br>
+
+    <label for="">Rating:</label>
+    <input type="text" [(ngModel)]="rating"><br><br>
+    <label >Free Delivery:</label>
+    <input type="radio" name="delivery" [(ngModel)]="freedelivery" [value]="true">Yes
+    <input type="radio" name="delivery" [(ngModel)]="freedelivery" [value]="false">No
+    <button (click)="add()">Add to cart</button>
+      
+</div>
+</div>
+  <h1>products</h1>
+ <table  class="table table-dark table-bordered table-striped">
+<thead>
+    <tr>
+        <th>sno</th>
+        <th>name</th>
+        <th>price</th>
+        <th>rating</th>
+        <th>freedelivery</th>
+        <th>ACTION</th>
+
+    </tr>
+</thead>
+<tbody>
+    <tr *ngFor="let product of products;let i=index">
+        <td>{{i+1}}</td>
+        <td>{{product.name}}</td>
+        <td>{{product.price}}</td>
+        <td>{{product.rating}}</td>
+        <td>{{product.freeDelivery}}</td>
+        <td>
+          <button class="btn btn-danger" (click)="delete(i)">delete</button>
+        </td>
+        
+
+    </tr> 
+
+</tbody>
+</table> 
+
+

@@ -1,0 +1,19 @@
+body{
+    width:100vw;
+    height:100vh;
+    background-color: blue;
+
+}
+.parent{
+    position: relative;
+    top:40px;
+}
+img{
+    width:300px;
+    height:300px;
+
+}
+.btn{
+    display: flex;
+    gap:160px;
+}
