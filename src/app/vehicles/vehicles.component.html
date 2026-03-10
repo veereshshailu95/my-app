@@ -1,3 +1,5 @@
+<h1 appHighlight>All vehicles</h1>
+<h6 appHighlight [color]="'blue'">Showing Availble vehicles in the table below</h6>
 <table>
     <thead>
         <tr> 
@@ -20,7 +22,7 @@
             <td>{{i+1}}</td>
             <td>{{ve.vehicle}}</td>
             <td>{{ve.color}}</td>
-            <td>{{ve.cost}}</td>
+            <td>{{ve.cost | price}}</td>
             <td>{{ve.fuel}}</td>
             <td>{{ve.id}}</td>
             <td>{{ve.manufacturer}}</td>

@@ -21,6 +21,11 @@ import { HttpClientModule} from '@angular/common/http';
 import { VehiclesComponent } from './vehicles/vehicles.component';
 import { AccountsComponent } from './accounts/accounts.component';
 import { PrettyComponent } from './pretty/pretty.component';
+import { MailComponent } from './mail/mail.component';
+import { PricePipe } from './price.pipe';
+import { RolePipe } from './role.pipe';
+import { HighlightDirective } from './highlight.directive';
+import { CapitalDirective } from './capital.directive';
 
 @NgModule({
   declarations: [
@@ -41,6 +46,11 @@ import { PrettyComponent } from './pretty/pretty.component';
     VehiclesComponent,
     AccountsComponent,
     PrettyComponent,
+    MailComponent,
+    PricePipe,
+    RolePipe,
+    HighlightDirective,
+    CapitalDirective,
   ],
   imports: [
     BrowserModule,

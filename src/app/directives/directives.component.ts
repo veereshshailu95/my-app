@@ -15,4 +15,8 @@ export class DirectivesComponent {
         {name:'laptop',price:50000},
       ]
       isvalid:boolean=true;
+
+      today:any = new Date();
+
+      user:any = {name:'abc',age:20}
 }

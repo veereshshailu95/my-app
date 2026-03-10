@@ -1,7 +1,7 @@
 <h2>Creat Employee</h2>
 
 <label for="">Name:</label>
-<input type="text" [(ngModel)]="name"><br>
+<input type="text" [(ngModel)]="name" appCapital><br>
 
 <label for="">Company</label>
 <input type="text" [(ngModel)]="company"><br>
@@ -44,7 +44,7 @@
     </thead>
     <tbody>
         <tr  *ngFor="let employee of employees;let i=index">
-            <td>{{employee.name}}</td>
+            <td>{{employee.name | role:employee.exp}}</td>
             <td>{{employee.company}}</td>
             <td>{{employee.package}}</td>
             <td>{{employee.exp}}</td>

@@ -15,6 +15,8 @@ import { FlipkartComponent } from './flipkart/flipkart.component';
 import { VehiclesComponent } from './vehicles/vehicles.component';
 import { AccountsComponent } from './accounts/accounts.component';
 import { PrettyComponent } from './pretty/pretty.component';
+import { MailComponent } from './mail/mail.component';
+
 
 
 const routes: Routes = [
@@ -33,6 +35,7 @@ const routes: Routes = [
     {path:'vehicles',component:VehiclesComponent},
     {path:'accounts',component:AccountsComponent},
     {path:'pretty',component:PrettyComponent},
+    {path:'Mail',component:MailComponent},
   ]}
 ];
 

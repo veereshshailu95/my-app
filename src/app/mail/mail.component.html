@@ -1,0 +1,9 @@
+
+<div class="parent">
+    <ol>
+        <li *ngFor="let content of manymails"
+            [style.color]="letmail(content)">
+            {{content.title}}
+        </li>
+    </ol>
+</div>
