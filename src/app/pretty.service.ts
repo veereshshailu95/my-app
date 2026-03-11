@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class PrettyService {
 
-  constructor(private pretty:HttpClient) { }
+  constructor(private pretty:HttpClient) { }         //[it's apply the pretty]
   getprettys():Observable<any>{
     return this.pretty.get('https://fakestoreapi.com/products')
   }

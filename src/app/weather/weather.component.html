@@ -1,0 +1,22 @@
+<div class="parent">
+   <h3>Weather in Hyderabad</h3>
+    <div class="circle"
+   
+[ngClass]="{
+ 'red': totalweather.current_weather.temperature < 20,
+'yellow': totalweather.current_weather.temperature >= 20 && totalweather.current_weather.temperature < 40,
+'green': totalweather.current_weather.temperature >= 40 && totalweather.current_weather.temperature < 60,
+'orange': totalweather.current_weather.temperature >= 60 && totalweather.current_weather.temperature < 80,
+'blue': totalweather.current_weather.temperature >= 80 
+    }" ></div>  
+
+   
+    <div class="degrees">{{totalweather.current_weather.temperature}}  {{totalweather.current_weather_units.temperature}}</div>
+    <div class="wind">Wind Speed:{{totalweather.current_weather.windspeed}} {{totalweather.current_weather_units.windspeed}}</div>  
+    <div class="direction">Wind Direction:{{totalweather.current_weather.winddirection}} {{totalweather.current_weather_units.winddirection}}</div>
+    <div class="day">Daytime:</div>
+     
+
+</div>
+
+

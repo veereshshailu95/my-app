@@ -16,6 +16,11 @@ import { VehiclesComponent } from './vehicles/vehicles.component';
 import { AccountsComponent } from './accounts/accounts.component';
 import { PrettyComponent } from './pretty/pretty.component';
 import { MailComponent } from './mail/mail.component';
+import { WeatherComponent } from './weather/weather.component';
+import { NaukariComponent } from './naukari/naukari.component';
+import { ContactCeoComponent } from './contact/contact-ceo/contact-ceo.component';
+
+
 
 
 
@@ -36,6 +41,9 @@ const routes: Routes = [
     {path:'accounts',component:AccountsComponent},
     {path:'pretty',component:PrettyComponent},
     {path:'Mail',component:MailComponent},
+    {path:'weather',component:WeatherComponent},
+    {path:'naukari',component:NaukariComponent},
+    {path:'contact-ceo',component:ContactCeoComponent},
   ]}
 ];
 

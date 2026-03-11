@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class MailService {
 
-  constructor(private httpmail:HttpClient) { }
+  constructor(private httpmail:HttpClient) { }    //[it's apply the mail]
   getMail():Observable<any>{
     return this.httpmail.get('https://jsonplaceholder.typicode.com/todos')
   }

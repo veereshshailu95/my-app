@@ -7,7 +7,11 @@
 .left{
    width: 20%;
     background-color: rgb(10, 208, 230);
+    font-size: 20px;
+    text-transform: uppercase;
 }
+
+
 .right{
     width: 80%;
     background-color: rgb(248, 250, 241);

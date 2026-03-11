@@ -26,6 +26,10 @@ import { PricePipe } from './price.pipe';
 import { RolePipe } from './role.pipe';
 import { HighlightDirective } from './highlight.directive';
 import { CapitalDirective } from './capital.directive';
+import { WeatherComponent } from './weather/weather.component';
+import { NaukariComponent } from './naukari/naukari.component';
+import { ContactModule } from './contact/contact.module';
+
 
 @NgModule({
   declarations: [
@@ -51,12 +55,15 @@ import { CapitalDirective } from './capital.directive';
     RolePipe,
     HighlightDirective,
     CapitalDirective,
+    WeatherComponent,
+    NaukariComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    ContactModule,
     
   ],
   providers: [],

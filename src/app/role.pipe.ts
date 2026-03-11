@@ -6,7 +6,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class RolePipe implements PipeTransform {
 
   transform(value: unknown, ...args:any): unknown {
-    if(args[0]>4){
+    if(args[0]>4){                                      //[it's apply the employees]
        return value+"SD"
     }
     else if(args[0]<4 && args[0]>=0){

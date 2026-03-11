@@ -5,7 +5,7 @@ import { Directive, ElementRef, HostListener } from '@angular/core';
 })
 export class CapitalDirective {
 
-  constructor(private elementRef:ElementRef) { }
+  constructor(private elementRef:ElementRef) { }       //[it's appply the employees]
 
   @HostListener('keyup')
   capita(){

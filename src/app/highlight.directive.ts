@@ -9,12 +9,12 @@ export class HighlightDirective {
 
   constructor(private elementRef: ElementRef) { }
 
-  @HostListener('mouseenter')
+  @HostListener('mouseenter')        //its apply the vehicles component
   apply() {
     this.elementRef.nativeElement.style.backgroundColor = this.color;
   }
 
-  @HostListener('mouseleave')
+  @HostListener('mouseleave')             //its apply the vehicles component
   remove() {
     this.elementRef.nativeElement.style.backgroundColor = 'white';
   }
