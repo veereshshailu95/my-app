@@ -1,19 +1,22 @@
 <h1 appHighlight>All vehicles</h1>
 <h6 appHighlight [color]="'blue'">Showing Availble vehicles in the table below</h6>
+<input type="text" [(ngModel)]="term" placeholder="search">
+<button (click)="filterVehicle()" class="btn btn-primary">submit</button>
 <table>
     <thead>
         <tr> 
             <th>sno</th>
             <th>vehicle</th>
-            <th>color</th>
+            <th (click)="sortVehicle('color')">color</th>
             <th>cost</th>
-            <th>fuel</th>
+            <th  (click)="sortVehicle('fuel')">fuel</th>
             <th>id</th>
             <th>manufacturer</th>
             <th>model</th>
             <th>type</th>
             <th>tyres</th>
             <th>image</th>
+            <th>Action</th>
             
         </tr>
     </thead>
@@ -32,6 +35,13 @@
             <td>
                 <img src="{{ve.image}}" alt="" width="100px" height="100px;">
             </td>
+            <td>
+                <button (click)="deleteVehicle(ve.id)" class="btn btn danger">delete</button>
+            </td>
         </tr>
     </tbody>
 </table>
+
+
+<button *ngFor="let x of [].constructor(10);let i=index"
+        (click)="pageVehicle(i+1)">{{i+1}}</button>

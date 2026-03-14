@@ -1,0 +1,47 @@
+<h1>movies</h1>
+<div class="parent">
+    <div class="child">
+        <div class="child1" *ngFor="let movi of totalmovie">
+            
+        <div class="left">
+          <p>
+            <img src="{{movi.poster_path}}" alt="">
+          </p>
+          <p class="name">{{movi.original_title}}</p>
+          <p class="date">{{movi.release_date}} | {{movi.movie_id}} | {{movi.original_language}}</p>
+          <p class="rating">⭐{{movi.vote_average}}</p>
+          <div class="more">
+          <h3>OVERVIEW</h3>
+          <h3>TRAILER&MORE</h3>
+           <h3>MORE LIKE THIS</h3>
+           <h3>DETAILS</h3>
+           </div>
+           <p>{{movi.overview}}</p>
+           <p>{{movi.popularity}}</p>
+
+
+        </div>
+        <div class="right">
+  <h2 class="cast">Cast</h2>
+
+  <div class="cast-list">
+
+      <div class="actor">
+          <img src="{{movi.profile_path"}}>
+          <!-- <p>{{}}</p> -->
+      </div>
+
+      <div class="actor">
+          <img src="actor.jpg">
+          <p>
+            <img [src]={{movi.character}} alt="">
+          </p>
+      </div>
+
+  </div>
+</div>
+
+      
+    </div>
+</div> 
+

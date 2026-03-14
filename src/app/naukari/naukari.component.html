@@ -1,11 +1,68 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <div class="parent">
-<div class="nav">
-   <div>Jobs</div>
-   <div>Companies</div>
-   <div>Services</div>
-   <input type="text"><br>
-   <button>naukari 360</button>
-   <div>icon</div>
-   <div>profile</div>
+   <div class="top">
+    
+      <div class="image">
+         <div>
+             <img src="data:image/png;base64,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" alt="">
+         </div>
+         <div class="na">naukari</div>
+      </div>
+      <div class="job">
+      <div>jobs</div>
+      <div>Companies</div>
+      <div>Services</div>
+      </div>
+      <div class="ts">
+         <input type="text" placeholder="search.jobs here">
+         <div class="sea"><i class="fa-solid fa-magnifying-glass"></i></div>
+      </div>
+      <button>login</button>
+      <button>Registre</button>
+      <div class="for">
+      <div>employess</div>
+      <div>profile</div>
+      </div>
+    
 </div>
+  <div class="bottom">
+         <div>Recommented jobs for you</div>
+         <div class="left">
+         <div>you can select upton5 jobs to apply</div>
+         <button class="apply">Apply</button>
+         </div>
+      </div>
+
+      <div class="bottom1">
+         <div>Applies(74)</div>
+         <div>Profile(74)</div>
+         <div>Top candiadata(6)</div>
+         <div>You might lik(75)</div>
+         <div>Prefernces(0)</div>
+       
+      </div>
+
+ <h3  *ngFor="let naukri of totalnaukari">
+    <div class="box">
+            <div class="in">
+           <h2>job categiry:{{naukri.job_category}}</h2>
+            <h2>company:{{naukri.company}}</h2>
+            <h4><i class="fa-solid fa-location-dot"></i>{{naukri.location}}</h4>
+          
+            <p><i class="fa-regular fa-clipboard"></i>numb er of openings:{{naukri.number_of_opening}},{{naukri.qualifications}}</p>
+            <p><i class="fa-solid fa-calendar-days"></i> created at:{{naukri.created_at}}</p>
+            <p class="end"><i class="fa-solid fa-calendar-minus"></i>Application deadline:{{naukri.application_deadline}}</p>
+
+
+            </div>
+          
+
+</div><br>
+</h3> 
+   
+
+
+      
 </div>
+
+

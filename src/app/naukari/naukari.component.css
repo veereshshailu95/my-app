@@ -1,8 +1,173 @@
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 .parent{
     width:100%;
-    height:100%;
-    background-color: aqua;
+    height:200px;
+    
+   
+    
+    
 }
-.nav{
-width:;
+
+.top{
+    width:100%;
+    height:200px;             
+    background-color:white;
+    display:flex;
+    align-items:start;
+    justify-content:space-evenly;
+    border-bottom:1px solid lightgray;
+   
+   
+    
+  
 }
+
+
+
+.image{
+    display:flex;
+    gap:5px;
+    align-items:center;
+   
+}
+
+
+.ts{
+    display:flex;
+    align-items:center;
+   
+}
+
+input{
+    height:25px;
+    padding:5px;
+    outline: 0;
+    border: 0;
+   
+   
+   
+}
+
+
+.ts{
+    position: relative;
+    top:20px;
+    border:2px solid grey;
+    border-radius: 10px;
+    
+   
+}
+.sea{
+    height:25px;
+    position: relative;
+    right:10px;
+  
+
+}
+
+
+
+
+button{
+    padding:5px 10px;
+    border:none;
+    background-color:#2f5be7;
+    color:white;
+    cursor:pointer;
+    border-radius:10px;
+    position: relative;
+    top:20px;
+
+}
+.for{
+    position: relative;
+    top:20px;
+    display: flex;
+    gap:20px;
+}
+
+button:hover{
+    background-color:#1c3ecf;
+     
+} 
+img{
+    width:60px;
+    height:60px;
+    border-radius: 50%;
+    position: relative;
+    right:10px;
+}
+.na{
+    position: relative;
+    font-size: 30px;
+     right:10px;
+}
+.job{
+    position: relative;
+    top:20px;
+    display: flex;
+    gap:10px;
+    font-size: 20px;
+}
+.bottom{
+    position: relative;
+    bottom:100px;
+    display: flex;
+    justify-content: space-between;
+     font-weight: bold;
+    
+
+}
+.left{
+    display: flex;
+    position: relative;
+    right:50px;
+   
+}
+.apply{
+    position: relative;
+    left:20px;
+    
+}
+.bottom1{
+    display: flex;
+    position: relative;
+    bottom:60px;
+    gap:20px;
+}
+.box{
+    width:800px;
+    height:300px;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    position: relative;
+    left:20px;
+    bottom:20px;
+    box-shadow: 0px 5px 5px grey;
+  
+}
+.in{
+    position: relative;
+    left:20px;
+    top:20px;
+}
+p{
+  font-size:20px;
+
+  
+}
+.end{
+  position: relative;
+  top:70px;
+}
+h2{
+    font-size: 30px;
+}
+

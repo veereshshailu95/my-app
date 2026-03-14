@@ -44,7 +44,9 @@ const routes: Routes = [
     {path:'weather',component:WeatherComponent},
     {path:'naukari',component:NaukariComponent},
     {path:'contact-ceo',component:ContactCeoComponent},
-    {path:'payment',loadChildren:()=>import('./payment/payment.module').then(m=>m.PaymentModule)}
+    {path:'payment',loadChildren:()=>import('./payment/payment.module').then(m=>m.PaymentModule)},
+    {path:'movies',loadChildren:()=>import('./movies/movies.module').then(m=>m.MoviesModule)}
+    
   ]}
 ];
 

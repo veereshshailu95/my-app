@@ -31,6 +31,7 @@ import { NaukariComponent } from './naukari/naukari.component';
 import { ContactModule } from './contact/contact.module';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -57,6 +58,7 @@ import { ContactModule } from './contact/contact.module';
     CapitalDirective,
     WeatherComponent,
     NaukariComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -64,6 +66,7 @@ import { ContactModule } from './contact/contact.module';
     FormsModule,
     HttpClientModule,
     ContactModule,
+    
     
   ],
   providers: [],

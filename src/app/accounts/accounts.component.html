@@ -1,15 +1,19 @@
 <h1>Accounts</h1>
+<input type="text" placeholder="search"[(ngModel)]="term"  (keyup)="filteraccount()">
+
+<button (click)="filteraccount()" class="btn btn-primary">submit</button>
 <table>
     <thead>
         <tr>
             <th>#</th>
             <th>account_name</th>
-            <th>accountnumber</th>
-            <th>availabelbalance</th>
+            <th (click)="sortaccount('accountnumber')">accountnumber</th>
+            <th (click)="sortaccount('availabelbalance')">availabelbalance</th>
             <th>city</th>
             <th>id</th>
             <th>ifsc</th>
             <th>profilepicture</th>
+            <th>Action</th>
 
         </tr>
 
@@ -26,6 +30,9 @@
             <td>{{acc.ifsc}}</td>
             <td>
                 <img src="{{acc.profie_picture}}" alt="" width="100px" height="100px">
+            </td>
+            <td>
+                <button (click)="deleteaccount(acc.id)" class="btn btn-danger">delete</button>
             </td>
         </tr>
     </tbody>

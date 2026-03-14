@@ -7,6 +7,7 @@ import { NaukariService } from '../naukari.service';
   styleUrls: ['./naukari.component.css']
 })
 export class NaukariComponent {
+  
     totalnaukari:any=[];
     constructor(private naukari:NaukariService){
     this.naukari.getnaukari().subscribe((data:any) =>{

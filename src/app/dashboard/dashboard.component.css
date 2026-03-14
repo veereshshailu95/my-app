@@ -9,6 +9,7 @@
     background-color: rgb(10, 208, 230);
     font-size: 20px;
     text-transform: uppercase;
+    overflow: auto;
 }
 
 
