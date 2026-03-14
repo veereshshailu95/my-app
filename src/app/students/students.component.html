@@ -1,0 +1,93 @@
+<div class="parent">
+    <div class="top">
+        <input type="text" placeholder="text to search"[(ngModel)]="term" (keyup)="getStudentsWithQueryParams()">
+
+        <label for="" style="position: relative; right:70px;">sortBY:</label>
+        <!-- <input type="text" > -->
+        <select name="" id="" class="v">
+            <option value=""></option>
+            <option value=""(click)="sort('name')">name</option>
+            <option value="" (click)="sort('D.O.B')">D.O.B</option>
+            <option value="" (click)="sort('City')">City</option>
+            <option value="" (click)="sort('Phone')">Phone</option>
+            <option value="" (click)="sort('Email')">Email</option>
+
+        </select>
+
+
+        <label for="" style="position: relative;right:50px;" >Order:</label>
+        <!-- <input type="text" class="order"> -->
+        <select name="" id="" class="a">
+            <option value=""></option>
+            <option value="" (click)="sort('A-Z')">A-Z</option>
+            <option value="" (click)="sort('Z-A')">Z-A</option>
+
+        </select>
+
+        <button (click)="sorte()" class="so">Sorte</button>
+
+        <label for="" style="position: relative;left:30px;">Number of items:</label>
+        <!-- <input type="text"  class="of"> -->
+        <select name="" id="" class="l">
+            <option value=""></option>
+            <option value="">5</option>
+            <option value="">10</option>
+            <option value="">15</option>
+            <option value="">20</option>
+            <option value="">25</option>
+            <option value="">30</option>
+        </select>
+
+        <label for="" style="position: relative;left:40px;">page:</label>
+        <!-- <input type="text" class="pages"> -->
+        <select name="" id="" class="u">
+            <option value=""></option>
+            <option value="">1</option>
+            <option value="">2</option>
+            <option value="">3</option>
+            <option value="">4</option>
+            <option value="">5</option>
+        
+
+        </select>
+
+        <button class="pagen">Pagenate</button>
+        <button class="Add">Add Id-Card</button>
+       
+    </div>
+    <div class="boxes">
+    <div class="box" *ngFor="let stude of totalstudents let i=index">
+        <div class="bottom-left"> 
+            <h5 style="color:blue;position: relative;left:100px;">{{stude.school_name}}</h5>
+            <h6 style="position: relative;left:100px; font-weight: bold;">{{stude.school_city}},{{stude.school_pin}}</h6>
+
+            <img src="data:image/jpeg;base64,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" alt="">
+        </div>
+        <div class="bottom-left1"><span style="font-size: 16px;position: relative;left:140px;font-weight: bold;">SESSION:2026-2027</span></div>
+        <div class="middle">
+            <img src="{{stude.profile_picture}}" alt="" class="imageall">
+            <div class="NCDPE">
+                <h6>Name:{{stude.name}}</h6>
+                <h6>City:{{stude.city}}</h6>
+                <h6>D.O.B:{{stude.dob}}</h6>
+                <h6>Phone:{{stude.phone}}</h6>
+                <h6>Email:{{stude.email}}</h6><br>
+                <hr>
+            </div>
+           
+        </div>
+      
+         <div class="threebtn">
+            <div class="three">
+            <button class="pa">view</button>
+            <button class="vi">edit</button>
+            <button (click)="deleteaccount(stude.id)"class="th">delete</button>
+            </div>
+         </div>
+    </div>
+    <div class="box1">
+        <div class="bottom-right">2</div>
+        <div class="bottom-right1"><span style="font-size: 16px;position: relative;left:140px;font-weight: bold;">SESSION:2026-2027</span></div>
+    </div>
+    </div>
+</div>

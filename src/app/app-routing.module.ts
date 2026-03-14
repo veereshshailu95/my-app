@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, createComponent, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -19,6 +19,9 @@ import { MailComponent } from './mail/mail.component';
 import { WeatherComponent } from './weather/weather.component';
 import { NaukariComponent } from './naukari/naukari.component';
 import { ContactCeoComponent } from './contact/contact-ceo/contact-ceo.component';
+import { StudentsComponent } from './students/students.component';
+import { CreateUserComponent } from './create-user/create-user.component';
+import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
 
 
 
@@ -44,10 +47,15 @@ const routes: Routes = [
     {path:'weather',component:WeatherComponent},
     {path:'naukari',component:NaukariComponent},
     {path:'contact-ceo',component:ContactCeoComponent},
+    {path:'vehicle2',component:VehiclesComponent},
+    {path:'students',component:StudentsComponent},
+    {path:'create-user',component:CreateUserComponent},
+    {path:'create-vehicle',component:CreateVehicleComponent},
     {path:'payment',loadChildren:()=>import('./payment/payment.module').then(m=>m.PaymentModule)},
     {path:'movies',loadChildren:()=>import('./movies/movies.module').then(m=>m.MoviesModule)}
     
-  ]}
+    ]
+  }
 ];
 
 @NgModule({

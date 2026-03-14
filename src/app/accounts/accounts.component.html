@@ -1,14 +1,14 @@
 <h1>Accounts</h1>
-<input type="text" placeholder="search"[(ngModel)]="term"  (keyup)="filteraccount()">
+<input type="text" placeholder="search"[(ngModel)]="term" >
 
-<button (click)="filteraccount()" class="btn btn-primary">submit</button>
+<button (click)="search()" class="btn btn-primary">submit</button>
 <table>
     <thead>
         <tr>
             <th>#</th>
             <th>account_name</th>
-            <th (click)="sortaccount('accountnumber')">accountnumber</th>
-            <th (click)="sortaccount('availabelbalance')">availabelbalance</th>
+            <th (click)="sort('account_number')">account_number</th>
+            <th (click)="sort('available_balance')">available_balance</th>
             <th>city</th>
             <th>id</th>
             <th>ifsc</th>
@@ -37,3 +37,9 @@
         </tr>
     </tbody>
 </table>
+
+
+<button *ngFor="let x of [].constructor(10);let i=index"
+        (click)="pageaccount(i+1)">{{i+1}}</button>
+
+

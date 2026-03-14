@@ -1,0 +1,45 @@
+<input type="text" [(ngModel)]="term">
+<button (click)="search()" class="btn btn-primary">search</button>
+<table>
+    <thead>
+        <tr> 
+            <th>sno</th>
+            <th>vehicle</th>
+            <th (click)="sort('color')">color</th>
+            <th>cost</th>
+            <th (click)="sort('fuel')">fuel</th>
+            <th>id</th>
+            <th>manufacturer</th>
+            <th>model</th>
+            <th>type</th>
+            <th>tyres</th>
+            <th>image</th>
+            <th>Action</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let ve of totalvehicle let i=index">
+            <td>{{i+1}}</td>
+            <td>{{ve.vehicle}}</td>
+            <td>{{ve.color}}</td>
+            <td>{{ve.cost | price}}</td>
+            <td>{{ve.fuel}}</td>
+            <td>{{ve.id}}</td>
+            <td>{{ve.manufacturer}}</td>
+            <td>{{ve.model}}</td>
+            <td>{{ve.type}}</td>
+            <td>{{ve.tyres}}</td>
+            <td>
+                <img src="{{ve.image}}" alt="" width="100px" height="100px;">
+            </td>
+            <td>
+                <button class="btn btn danger">delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<button *ngFor="let x of [].constructor(10);let i=index"
+        (click)="pageVehicle(i+1)">{{i+1}}</button>
+

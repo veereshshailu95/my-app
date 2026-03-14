@@ -10,7 +10,8 @@ export class VehiclesComponent {
   totalvehicle:any= [];
   constructor(private vehicle:VehiclesService){
 
-this.vehicle.getvehicle().subscribe((data:any)=>{
+this.vehicle.getvehicle().subscribe(
+  (data:any)=>{
   console.log(data)
   this.totalvehicle=data;
 })

@@ -8,45 +8,55 @@ import { AccountsService } from '../accounts.service';
 })
 export class AccountsComponent {
 
+
+   
+    term:string="";
+    column:string="";
+    order:string="";
+    page:number=1;
+
   totalaccounts:any=[];
 
   constructor(private account: AccountsService){
-  this.account.getaccounts().subscribe((data:any)=>{
+  this.account.getaccounts().subscribe(
+    (data:any)=>{
     console.log(data)
     this.totalaccounts=data;
-  })
+  }
+ )
   }
 
    
-  term:string="";
-  filteraccount(){
-    this.account.filteraccounts(this.term).subscribe(
-      (data:any)=>{
-        this.totalaccounts=data;
-      },
-      (err:any)=>{
-       alert("internal server error")
-      }
-    )
+
+  search(){
+    this.getaccountWithQueryParams()
   }
 
 
   
-  isAsc:boolean = false;
-  sortaccount(column:string){
-    this.isAsc = !this.isAsc;
-    this.account.sortaccounts(column,this.isAsc?'asc':'desc').subscribe(
+   getaccountWithQueryParams(){
+    this.account.getaccountWithQueryParams(this.term,this.column,this.order,this.page).subscribe(
       (data:any)=>{
-       this.totalaccounts = data;
+        this.totalaccounts=data;
       },
       (err:any)=>{
-        alert("internal server error")
+      alert("internal server error")
       }
     )
   }
 
+  
+  isAsc:boolean=false;
+  sort(column:string){
+    this.column=column;
+    this.isAsc=!this.isAsc;
+    this.order=this.isAsc?'asc':'desc';
+    this.getaccountWithQueryParams();
+  }
+  
 
-  deleteaccount(id:string){
+  
+    deleteaccount(id:string){
     this.account.deleteaccount(id).subscribe(
       (data:any)=>{
         this.account = data;
@@ -57,9 +67,15 @@ export class AccountsComponent {
         alert("internal server error")
       }
     )
-
-    
   }
+
+
+  
+  pageaccount(page:number){
+    this.page=page;
+    this.getaccountWithQueryParams();
+  }
+
 }
 
 
