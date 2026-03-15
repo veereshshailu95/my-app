@@ -15,17 +15,17 @@ export class Vehicle2Component {
   totalvehicle: any = [];
 
   constructor(private vehicle: VehiclesService) {
-    this.getVehiclesWithQueryParams();
+    // this.getVehiclesWithQueryParams();
 
-    // this.vehicle.getvehicle().subscribe(
-    //   (data: any) => {
-    //     console.log(data)
-    //     this.totalvehicle = data;
-    //   },
-    //   (err: any)=>{
-    //     alert("internal server error");
-    //   }
-    // )
+    this.vehicle.getvehicle().subscribe(
+      (data: any) => {
+        console.log(data)
+        this.totalvehicle = data;
+      },
+      (err: any)=>{
+        alert("internal server error");
+      }
+    )
   }
 
 
@@ -62,3 +62,18 @@ export class Vehicle2Component {
 
 
 }
+
+
+//constractor(prevet vehicle.vehicleServices){
+//this.vehicle.getvehicle().subscribe(
+//(data:any)=>{
+//console.log(data);
+//this.totalvehicle=data;
+
+//},
+//(err:any)=>{
+//alert("interbal serviver error")
+//}
+//)
+//}
+

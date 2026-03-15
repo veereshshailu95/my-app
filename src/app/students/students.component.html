@@ -3,32 +3,32 @@
         <input type="text" placeholder="text to search"[(ngModel)]="term" (keyup)="getStudentsWithQueryParams()">
 
         <label for="" style="position: relative; right:70px;">sortBY:</label>
+
         <!-- <input type="text" > -->
-        <select name="" id="" class="v">
+        <select name="" id="" class="v" [(ngModel)]="column">
             <option value=""></option>
-            <option value=""(click)="sort('name')">name</option>
-            <option value="" (click)="sort('D.O.B')">D.O.B</option>
-            <option value="" (click)="sort('City')">City</option>
-            <option value="" (click)="sort('Phone')">Phone</option>
-            <option value="" (click)="sort('Email')">Email</option>
+            <option value="name">name</option>
+            <option value="dob">D.O.B</option>
+            <option value="city">City</option>
+            <option value="phone">Phone</option>
+            <option value="email">Email</option>
 
         </select>
 
 
         <label for="" style="position: relative;right:50px;" >Order:</label>
         <!-- <input type="text" class="order"> -->
-        <select name="" id="" class="a">
-            <option value=""></option>
-            <option value="" (click)="sort('A-Z')">A-Z</option>
-            <option value="" (click)="sort('Z-A')">Z-A</option>
+        <select name="" id="" class="a" [(ngModel)]="order">
+            <option value="asc">asc</option>
+            <option value="desc">desc</option>
 
         </select>
 
-        <button (click)="sorte()" class="so">Sorte</button>
+        <button (click)="sort(column,order)" class="so">Sort</button>
 
         <label for="" style="position: relative;left:30px;">Number of items:</label>
         <!-- <input type="text"  class="of"> -->
-        <select name="" id="" class="l">
+        <select name="" id="" class="l"[(ngModel)]="page">
             <option value=""></option>
             <option value="">5</option>
             <option value="">10</option>
@@ -40,7 +40,7 @@
 
         <label for="" style="position: relative;left:40px;">page:</label>
         <!-- <input type="text" class="pages"> -->
-        <select name="" id="" class="u">
+        <select name="" id="" class="u"[(ngModel)]=page>
             <option value=""></option>
             <option value="">1</option>
             <option value="">2</option>
@@ -51,7 +51,7 @@
 
         </select>
 
-        <button class="pagen">Pagenate</button>
+        <button (click)="pagestudent(page)"class="pagen">Pagenate</button>
         <button class="Add">Add Id-Card</button>
        
     </div>
@@ -91,3 +91,7 @@
     </div>
     </div>
 </div>
+
+
+<button *ngFor="let x of [].constructor(10);let i=index"
+        (click)="pagestudent(i+1)">{{i+1}}</button>

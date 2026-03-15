@@ -1,13 +1,18 @@
+
+<form [formGroup]="userForm" (ngSubmit)="submit()">
 <label for="">name:</label>
-<input type="text"><br>
+<input type="text" formControlName="name"><br>
 
 <label for="">age:</label>
-<input type="text"><br>
+<input type="text" formControlName="age"><br>
 
 <label for="">email:</label>
-<input type="text"><br>
+<input type="text" formControlName="email"><br>
 
 <label for="">phone:</label>
-<input type="text"><br>
+<input type="text" formControlName="phone"><br>
+<input type="submit">
+
+</form>
 
 

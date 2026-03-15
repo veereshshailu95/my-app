@@ -33,17 +33,15 @@ export class StudentsComponent {
     )
   }
 
-  isAsc:boolean=false;
-  sort(column:string){
-    this.column=this.column;
-    this.isAsc=!this.isAsc;
-    this.order=this.isAsc?'asc':'desc';
+ 
+  sort(column:string,order:string){
+    this.column= this.column;
+    this.order= this.order;
     this.getStudentsWithQueryParams();
   }
+  
 
-  sorte(){
-     this.getStudentsWithQueryParams();
-  }
+ 
 
   deleteaccount(id:string){
     this.student.deleteaccounts(id).subscribe(
@@ -56,5 +54,17 @@ export class StudentsComponent {
       }
     )
   }
+
+  
+
+ 
+  limit:number=5;
+
+  pagestudent(page:number){
+    this.page=page;
+    this.getStudentsWithQueryParams();
+  }
+
+
 
 }

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-create-user',
@@ -7,4 +8,14 @@ import { Component } from '@angular/core';
 })
 export class CreateUserComponent {
 
-}
+    userForm:FormGroup= new FormGroup({
+      name:new FormControl(),
+      age:new FormControl(),
+      email:new FormControl(),
+      phone:new FormControl(),
+    })
+
+    submit(){
+      console.log(this.userForm.value)
+    }
+  }

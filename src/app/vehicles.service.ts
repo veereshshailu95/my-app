@@ -27,6 +27,10 @@ export class VehiclesService {
     return this.httpClient.get("https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction?filter="+term+"&sortby="+column+"&order="+order+"&limit=10&page="+page);   //[products or employees order lo ]
   }
 
+  createVehicle(vehicle:any):Observable<any>{
+    return this.httpClient.post("https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction",vehicle);
+  }
+
   deleteVehicle(id:string):Observable<any>{
     return this.httpClient.delete("https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction/"+id);
   }
@@ -37,3 +41,7 @@ export class VehiclesService {
 
 
 //?filter=+term+"&sortby="+column+"&order="+order+"&limit=10&page="+page;
+//constractor(prevate httpclient:HttpClient){ }
+//getvehicle(){
+//return this.httpclient.get("https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction/")}
+//

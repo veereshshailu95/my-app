@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CalculatorComponent } from './calculator/calculator.component';
 import { HomeComponent } from './home/home.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
@@ -74,6 +74,7 @@ import { CreateVehicleComponent } from './create-vehicle/create-vehicle.componen
     FormsModule,
     HttpClientModule,
     ContactModule,
+    ReactiveFormsModule
     
     
   ],

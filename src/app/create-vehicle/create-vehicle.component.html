@@ -1,27 +1,31 @@
+<form [formGroup]="VehicleForm" (ngsubmit)="submit()">
 <label for="">vehicle:</label>
 <input type="text"><br>
 
 <label for="">manufacture:</label>
-<input type="text"><br>
+<input type="text" formControlName="Vehicle"><br>
 
 <label for="">model:</label>
-<input type="text"><br>
+<input type="text" formControlName="manufacturer"><br>
 
 <label for="">type:</label>
-<input type="text"><br>
+<input type="text" formControlName="model"><br>
 
 <label for="">fuel:</label>
-<input type="text"><br>
+<input type="text" formControlName="type"><br>
 
 <label for="">color:</label>
-<input type="text"><br>
+<input type="text" formControlName="fuel"><br>
 
 <label for="">image:</label>
-<input type="text"><br>
+<input type="text" formControlName="color"><br>
 
 <label for="">cost:</label>
-<input type="text"><br>
+<input type="text" formControlName="cost"><br>
+
 <label for="">tyres:</label>
-<input type="text"><br>
+<input type="text" formControlName="tyres"><br>
+<input type="submit">
+</form>
 
 
