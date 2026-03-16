@@ -1,13 +1,17 @@
+
 <div class="parent">
-    <form action="">
+        <h1>login Form</h1>
+    <form [formGroup]="loginForm" (ngSubmit)="login()">
+       
         <div class="action">
-        <label for=""> Full name:</label>
-        <input type="text" placeholder="Full name"><br>
+        <label for=""> user Name:</label>
+        <input type="text"  formControlName="username"><br>
 
         <label for="">password:</label>
-        <input type="password" placeholder="Password"><br>
+        <input type="password" formControlName="password"><br>
+        <input type="submit" value="login">
         
-        <button class="btn btn-primary" routerLink="/dashboard">LOGIN</button>
+        <!-- <button class="btn btn-primary" >LOGIN</button> -->
         </div>
 
     </form>

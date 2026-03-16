@@ -22,14 +22,15 @@ import { ContactCeoComponent } from './contact/contact-ceo/contact-ceo.component
 import { StudentsComponent } from './students/students.component';
 import { CreateUserComponent } from './create-user/create-user.component';
 import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
+import { AllpracticeComponent } from './allpractice/allpractice.component';
+import { AuthGuard } from './auth.guard';
 
 
 
 
 
 const routes: Routes = [
-  {path:'', component:LoginComponent},
-  {path:'dashboard',component:DashboardComponent, children:[
+    {path:'dashboard',canActivate:[AuthGuard],component:DashboardComponent, children:[
     {path:'calculator', component: CalculatorComponent},
     {path:'home', component:HomeComponent},
     {path:'data-binding',component:DataBindingComponent},
@@ -51,11 +52,18 @@ const routes: Routes = [
     {path:'students',component:StudentsComponent},
     {path:'create-user',component:CreateUserComponent},
     {path:'create-vehicle',component:CreateVehicleComponent},
+    {path:'allpractice',component:AllpracticeComponent},
     {path:'payment',loadChildren:()=>import('./payment/payment.module').then(m=>m.PaymentModule)},
     {path:'movies',loadChildren:()=>import('./movies/movies.module').then(m=>m.MoviesModule)}
     
     ]
-  }
+  },
+    {path:'login', component:LoginComponent},
+    {path:'', component:LoginComponent},
+   
+
+
+
 ];
 
 @NgModule({

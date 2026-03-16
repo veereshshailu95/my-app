@@ -1,0 +1,38 @@
+<table>
+    <thead>
+        <tr>
+              <th (click)="sortallpractice('id')">id</th>
+            <th>Vehicle</th>
+            <th>manufacturer</th>
+            <th>model</th>
+            <th>type</th>
+            <th (click)="sortallpractice('fuel')">fuel</th>
+            <th (click)="sortallpractice('color')">color</th>
+            <th>image</th>
+            <th>cost</th>
+            <th>tyres</th>
+          
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let all of totalallpractice let i=index">
+            <td>{{all.id}}</td>
+            <td>{{all.Vehicle}}</td>
+            <td>{{all.manufacturer}}</td>
+            <td>{{all.model}}</td>
+            <td>{{all.type}}</td>
+            <td>{{all.fuel}}</td>
+            <td>{{all.color}}</td>
+            <td>
+                <img src="{{all.image}}" alt="" width="100px"height="100px">
+            </td>
+            <td>{{all.cost}}</td>
+            <td>{{all.tyres}}</td>
+        
+            <td>
+                <button (click)="deleteallpractice(all.id)"class="btn btn-danger">delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

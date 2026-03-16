@@ -19,3 +19,17 @@ export class CreateUserComponent {
       console.log(this.userForm.value)
     }
   }
+
+  //userForm:FormGroup=new FormGroup({
+  //name:new FormControl();
+  //age:new FormGroup();
+  //email:new FormGroup();
+  //phone:new FormGroup();
+//})
+
+//userForm:FormGroup=new FormGroup({
+//name:new FormGroup();
+//age:new FormGroup();
+//email:new FormGroup();
+//phone:new FormGroup();
+//})

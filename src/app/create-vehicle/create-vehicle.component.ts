@@ -11,14 +11,15 @@ export class CreateVehicleComponent {
      
 
   VehicleForm:FormGroup=new FormGroup({
-      vehicle:new FormControl(),
-      manufacture:new FormControl(),
+      Vehicle:new FormControl(),
+      manufacturer:new FormControl(),
       model:new FormControl(),
       type:new FormControl(),
       fuel: new FormControl(),
       color:new FormControl(),
+      image:new FormControl(),
       cost:new FormControl(),
-      tyres:new FormControl(),
+      tyres :new FormControl(),
       
 
   })
