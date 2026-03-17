@@ -11,6 +11,11 @@ export class VehiclesService {
   getvehicle(){
     return this.httpClient.get("https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction?ass lo lo innalimit=10&page=1")  //[get ni vehicle ni API nunchi thisukodaniki use chestharu]
   }
+
+  getvehicl(id:string):Observable<any>{
+    return this.httpClient.get("https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction/"+id)  //[get ni vehicle ni API nunchi thisukodaniki use chestharu]
+  }
+
   filtersVehicle(term:string):Observable<any>{
     return this.httpClient.get("https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction?filter="+term);     //[filter ante input lo search chesthe auto motiga vasthundhi]
   }

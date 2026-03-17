@@ -34,6 +34,7 @@ import { StudentsComponent } from './students/students.component';
 import { CreateUserComponent } from './create-user/create-user.component';
 import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
 import { AllpracticeComponent } from './allpractice/allpractice.component';
+import { ViewVehicleComponent } from './view-vehicle/view-vehicle.component';
 
 
 
@@ -68,6 +69,7 @@ import { AllpracticeComponent } from './allpractice/allpractice.component';
     CreateUserComponent,
     CreateVehicleComponent,
     AllpracticeComponent,
+    ViewVehicleComponent,
     
   ],
   imports: [

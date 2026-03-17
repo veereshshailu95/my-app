@@ -24,6 +24,7 @@ import { CreateUserComponent } from './create-user/create-user.component';
 import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
 import { AllpracticeComponent } from './allpractice/allpractice.component';
 import { AuthGuard } from './auth.guard';
+import { ViewVehicleComponent } from './view-vehicle/view-vehicle.component';
 
 
 
@@ -53,6 +54,7 @@ const routes: Routes = [
     {path:'create-user',component:CreateUserComponent},
     {path:'create-vehicle',component:CreateVehicleComponent},
     {path:'allpractice',component:AllpracticeComponent},
+    {path:'view-vehicle/:id',component:ViewVehicleComponent},
     {path:'payment',loadChildren:()=>import('./payment/payment.module').then(m=>m.PaymentModule)},
     {path:'movies',loadChildren:()=>import('./movies/movies.module').then(m=>m.MoviesModule)}
     
