@@ -55,6 +55,7 @@ const routes: Routes = [
     {path:'create-vehicle',component:CreateVehicleComponent},
     {path:'allpractice',component:AllpracticeComponent},
     {path:'view-vehicle/:id',component:ViewVehicleComponent},
+    {path:'edit-vehicle/:id',component:CreateVehicleComponent},
     {path:'payment',loadChildren:()=>import('./payment/payment.module').then(m=>m.PaymentModule)},
     {path:'movies',loadChildren:()=>import('./movies/movies.module').then(m=>m.MoviesModule)}
     
