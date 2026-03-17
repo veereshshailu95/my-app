@@ -35,13 +35,14 @@ import { CreateUserComponent } from './create-user/create-user.component';
 import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
 import { AllpracticeComponent } from './allpractice/allpractice.component';
 import { ViewVehicleComponent } from './view-vehicle/view-vehicle.component';
+import { ViewStudentComponent } from './view-student/view-student.component';
+import { CreatStudentComponent } from './creat-student/creat-student.component';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-   
     LoginComponent,
     DashboardComponent,
     CalculatorComponent,
@@ -70,6 +71,8 @@ import { ViewVehicleComponent } from './view-vehicle/view-vehicle.component';
     CreateVehicleComponent,
     AllpracticeComponent,
     ViewVehicleComponent,
+    ViewStudentComponent,
+    CreatStudentComponent,
     
   ],
   imports: [

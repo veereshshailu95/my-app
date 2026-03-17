@@ -1,7 +1,7 @@
 <h1 appHighlight>All vehicles</h1>
 <h6 appHighlight [color]="'blue'">Showing Availble vehicles in the table below</h6>
-<input type="text" [(ngModel)]="term" placeholder="search">
-<button (click)="filterVehicle()" class="btn btn-primary">submit</button>
+<input type="text" [(ngModel)]="term" placeholder="search" (keyup)="filterVehicle()">
+<!-- <button (click)="filterVehicle()" class="btn btn-primary">submit</button> -->
 <table>
     <thead>
         <tr> 
@@ -23,7 +23,7 @@
     <tbody>
         <tr *ngFor="let ve of totalvehicle  ">
             <td>{{ve.id}}</td>
-            <td>{{ve.vehicle}}</td>
+            <td>{{ve.Vehicle}}</td>
             <td>{{ve.color}}</td>
             <td>{{ve.cost | price}}</td>
             <td>{{ve.fuel}}</td>

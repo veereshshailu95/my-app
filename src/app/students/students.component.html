@@ -79,8 +79,8 @@
       
          <div class="threebtn">
             <div class="three">
-            <button class="pa">view</button>
-            <button class="vi">edit</button>
+            <button class="pa" routerLink="/dashboard/view-student/{{stude.id}}">view</button>
+            <button class="vi" routerLink="/dashboard/creat-student/{{stude.id}}">edit</button>
             <button (click)="deleteaccount(stude.id)"class="th">delete</button>
             </div>
          </div>

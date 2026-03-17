@@ -53,10 +53,7 @@ export class CreateVehicleComponent {
 
     )
   }
-
-     
-    
-    else{
+ else{
     //creat
      this.vehicleService.editVehicle(this.id,this.VehicleForm.value).subscribe(
       (data:any)=>{

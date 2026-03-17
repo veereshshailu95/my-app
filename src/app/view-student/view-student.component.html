@@ -1,0 +1,13 @@
+<div class="profile-container">
+
+  <div class="profile-card">
+    <img [src]="studen.profile_picture" alt="" class="profile-img">
+
+    <h1 class="name">{{studen.name}}</h1>
+
+    <p class="info"><span>Email:</span> {{studen.email}}</p>
+    <p class="info"><span>Phone:</span> {{studen.phone}}</p>
+    <p class="info"><span>DOB:</span> {{studen.dob | date}}</p>
+  </div>
+
+</div>

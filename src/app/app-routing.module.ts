@@ -25,6 +25,8 @@ import { CreateVehicleComponent } from './create-vehicle/create-vehicle.componen
 import { AllpracticeComponent } from './allpractice/allpractice.component';
 import { AuthGuard } from './auth.guard';
 import { ViewVehicleComponent } from './view-vehicle/view-vehicle.component';
+import { ViewStudentComponent } from './view-student/view-student.component';
+import { CreatStudentComponent } from './creat-student/creat-student.component';
 
 
 
@@ -56,6 +58,9 @@ const routes: Routes = [
     {path:'allpractice',component:AllpracticeComponent},
     {path:'view-vehicle/:id',component:ViewVehicleComponent},
     {path:'edit-vehicle/:id',component:CreateVehicleComponent},
+    {path:'view-student/:id',component:ViewStudentComponent},
+    {path:'creat-student/:id',component:CreatStudentComponent},
+
     {path:'payment',loadChildren:()=>import('./payment/payment.module').then(m=>m.PaymentModule)},
     {path:'movies',loadChildren:()=>import('./movies/movies.module').then(m=>m.MoviesModule)}
     
