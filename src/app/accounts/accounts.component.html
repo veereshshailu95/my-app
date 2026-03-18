@@ -32,6 +32,8 @@
                 <img src="{{acc.profie_picture}}" alt="" width="100px" height="100px">
             </td>
             <td>
+                <button class="btn btn-primary" routerLink="/dashboard/view-accounts/{{acc.id}}">view</button>
+                <button class="btn btn-warning" routerLink="/dashboard/create-accounts/{{acc.id}}">edit</button>
                 <button (click)="deleteaccount(acc.id)" class="btn btn-danger">delete</button>
             </td>
         </tr>

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { VehiclesService } from '../vehicles.service';
+import { Vehicle } from '../vehicle';
 
 @Component({
   selector: 'app-vehicles',
@@ -7,49 +8,49 @@ import { VehiclesService } from '../vehicles.service';
   styleUrls: ['./vehicles.component.css']
 })
 export class VehiclesComponent {
-  totalvehicle:any= [];
-  constructor(private vehicle:VehiclesService){
+  totalvehicle: Vehicle[] = [];
+  constructor(private vehicle: VehiclesService) {
 
-this.vehicle.getvehicle().subscribe(
-  (data:any)=>{
-  console.log(data)
-  this.totalvehicle=data;
-})
+    this.vehicle.getvehicle().subscribe(
+      (data: Vehicle[]) => {
+        console.log(data)
+        this.totalvehicle = data;
+      })
 
 
 
   }
-  term:string="";
-  filterVehicle(){
+  term: string = "";
+  filterVehicle() {
     this.vehicle.filtersVehicle(this.term).subscribe(
-      (data:any)=>{
-       this.totalvehicle = data;
+      (data: Vehicle[]) => {
+        this.totalvehicle = data;
       },
-      (err:any)=>{
+      (err: any) => {
         alert("internal server error")
       }
     )
   }
-    
-   pageVehicle(page:number){
+
+  pageVehicle(page: number) {
     this.vehicle.pageVehicle(page).subscribe(
-      (data:any)=>{
-       this.totalvehicle = data;
+      (data: Vehicle[]) => {
+        this.totalvehicle = data;
       },
-      (err:any)=>{
+      (err: any) => {
         alert("internal server error")
       }
     )
   }
-   
-  isAsc:boolean = false;
-  sortVehicle(column:string){
+
+  isAsc: boolean = false;
+  sortVehicle(column: string) {
     this.isAsc = !this.isAsc;
-    this.vehicle.sortVehicle(column,this.isAsc?'asc':'desc').subscribe(
-      (data:any)=>{
-       this.totalvehicle = data;
+    this.vehicle.sortVehicle(column, this.isAsc ? 'asc' : 'desc').subscribe(
+      (data: Vehicle[]) => {
+        this.totalvehicle = data;
       },
-      (err:any)=>{
+      (err: any) => {
         alert("internal server error")
       }
     )
@@ -57,13 +58,13 @@ this.vehicle.getvehicle().subscribe(
 
 
 
-   deleteVehicle(id:string){
+  deleteVehicle(id: string) {
     this.vehicle.deleteVehicle(id).subscribe(
-      (data:any)=>{
+      (data: Vehicle) => {
         alert("delete succefully!!!!");
         location.reload();
       },
-      (err:any)=>{
+      (err: any) => {
         alert("internal server error")
       }
     )

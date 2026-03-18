@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { VehiclesService } from '../vehicles.service';
+import { Vehicle } from '../vehicle';
 
 @Component({
   selector: 'app-vehicle2',
@@ -12,13 +13,13 @@ export class Vehicle2Component {
   order:string="";
   page:number=1;
 
-  totalvehicle: any = [];
+  totalvehicle: Vehicle[] = [];
 
   constructor(private vehicle: VehiclesService) {
     // this.getVehiclesWithQueryParams();
 
     this.vehicle.getvehicle().subscribe(
-      (data: any) => {
+      (data: Vehicle[]) => {
         console.log(data)
         this.totalvehicle = data;
       },
@@ -32,7 +33,7 @@ export class Vehicle2Component {
 
   getVehiclesWithQueryParams(){
     this.vehicle.getVehiclesWithQueryParams(this.term,this.column,this.order,this.page).subscribe(
-      (data:any)=>{
+      (data:Vehicle[])=>{
         this.totalvehicle=data;
       },
       (err:any)=>{

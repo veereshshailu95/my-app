@@ -1,0 +1,97 @@
+/* Full page container */
+.account-container {
+    width: 100%;
+    min-height: 100vh;
+    padding: 40px 60px;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: #222;
+}
+
+/* Title */
+.title {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #000;
+    border-bottom: 3px solid #000;
+    padding-bottom: 8px;
+    letter-spacing: 1px;
+}
+
+/* Layout */
+.account-content {
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+}
+
+/* Profile section */
+.profile-section {
+    width: 220px;
+    text-align: center;
+}
+
+/* Profile image */
+.profile-section img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border: 3px solid #000;
+    padding: 4px;
+    background-color: #fff;
+}
+
+/* Details section */
+.details-section {
+    flex: 1;
+}
+
+/* Each row like table */
+.details-section p {
+    display: flex;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+    margin: 0;
+    font-size: 16px;
+}
+
+/* Label (left side) */
+.details-section span {
+    width: 220px;
+    font-weight: 600;
+    color: #000;
+}
+
+/* Value (right side) */
+.details-section p::after {
+    content: "";
+    flex: 1;
+}
+
+/* Alternate row shading (classic table feel) */
+.details-section p:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Hover effect (subtle) */
+.details-section p:hover {
+    background-color: #f1f1f1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .account-content {
+        flex-direction: column;
+    }
+
+    .profile-section {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .details-section span {
+        width: 150px;
+    }
+}

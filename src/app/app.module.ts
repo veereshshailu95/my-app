@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { createComponent, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -17,7 +17,7 @@ import { EventRegistrationComponent } from './event-registration/event-registrat
 import { BmiCalculatorComponent } from './bmi-calculator/bmi-calculator.component';
 import { EmployeeComponent } from './employee/employee.component';
 import { FlipkartComponent } from './flipkart/flipkart.component';
-import { HttpClientModule} from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import { VehiclesComponent } from './vehicles/vehicles.component';
 import { AccountsComponent } from './accounts/accounts.component';
 import { PrettyComponent } from './pretty/pretty.component';
@@ -37,6 +37,9 @@ import { AllpracticeComponent } from './allpractice/allpractice.component';
 import { ViewVehicleComponent } from './view-vehicle/view-vehicle.component';
 import { ViewStudentComponent } from './view-student/view-student.component';
 import { CreatStudentComponent } from './creat-student/creat-student.component';
+import { ViewAccountsComponent } from './view-accounts/view-accounts.component';
+import { CreateAccountsComponent } from './create-accounts/create-accounts.component';
+import { TokenInterceptor } from './token.interceptor';
 
 
 
@@ -73,6 +76,9 @@ import { CreatStudentComponent } from './creat-student/creat-student.component';
     ViewVehicleComponent,
     ViewStudentComponent,
     CreatStudentComponent,
+    ViewAccountsComponent,
+    CreateAccountsComponent
+   
     
   ],
   imports: [
@@ -85,7 +91,13 @@ import { CreatStudentComponent } from './creat-student/creat-student.component';
     
     
   ],
-  providers: [],
+  providers: [
+    {
+      provide:HTTP_INTERCEPTORS,
+      useClass:TokenInterceptor,
+      multi:true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

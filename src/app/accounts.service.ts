@@ -13,6 +13,16 @@ export class AccountsService {
       return this.httpaccounts.get("https://6128991386a213001729f9df.mockapi.io/test/v1/principals")
     }
 
+     getaccount(id:string):Observable<any>{
+      return this.httpaccounts.get("https://6128991386a213001729f9df.mockapi.io/test/v1/principals/"+id)
+    }
+
+     getaccoun(id:string,account:string):Observable<any>{
+      return this.httpaccounts.put("https://6128991386a213001729f9df.mockapi.io/test/v1/principals/"+id,account)
+    }
+
+
+
     deleteaccount(id:string):Observable<any>{
       return this.httpaccounts.delete("https://6128991386a213001729f9df.mockapi.io/test/v1/principals/"+id)
     }

@@ -27,6 +27,8 @@ import { AuthGuard } from './auth.guard';
 import { ViewVehicleComponent } from './view-vehicle/view-vehicle.component';
 import { ViewStudentComponent } from './view-student/view-student.component';
 import { CreatStudentComponent } from './creat-student/creat-student.component';
+import { ViewAccountsComponent } from './view-accounts/view-accounts.component';
+import { CreateAccountsComponent } from './create-accounts/create-accounts.component';
 
 
 
@@ -60,6 +62,9 @@ const routes: Routes = [
     {path:'edit-vehicle/:id',component:CreateVehicleComponent},
     {path:'view-student/:id',component:ViewStudentComponent},
     {path:'creat-student/:id',component:CreatStudentComponent},
+    {path:'view-accounts/:id',component:ViewAccountsComponent},
+    {path:'create-accounts/:id',component:CreateAccountsComponent},
+    {path:'creat-accounts',component:CreateAccountsComponent},
 
     {path:'payment',loadChildren:()=>import('./payment/payment.module').then(m=>m.PaymentModule)},
     {path:'movies',loadChildren:()=>import('./movies/movies.module').then(m=>m.MoviesModule)}

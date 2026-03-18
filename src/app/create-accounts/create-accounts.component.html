@@ -1,0 +1,78 @@
+<!-- <h1>{{id ? 'Edit account' : 'Create account'}}</h1>
+<form [formGroup]="accountForm" (ngSubmit)="submit()">
+<label for="">accountname:</label>
+<input type="text" formControlName="account_name">
+
+<label for="">accountbalance:</label>
+<input type="text" formControlName="available_balance">
+
+<label for="">accountnumber:</label>
+<input type="text" formControlName="account_number">
+
+
+<label for="">City:</label>
+<input type="text" formControlName="city">
+
+<label for="">account-prodile-picture:</label>
+<input type="text" formControlName="profie_picture">
+
+
+<label for="">Ifsc-code:</label>
+<input type="text" formControlName="ifsc_code">
+
+
+<label for="">accountID:</label>
+<input type="text" formControlName="id">
+
+<input type="submit">
+
+</form> -->
+
+<div class="form-container">
+
+  <h1 class="form-title">{{id ? 'Edit Account' : 'Create Account'}}</h1>
+
+  <form [formGroup]="accountForm" (ngSubmit)="submit()" class="account-form">
+
+    <div class="form-row">
+      <label>Account Name</label>
+      <input type="text" formControlName="account_name">
+    </div>
+
+    <div class="form-row">
+      <label>Account Balance</label>
+      <input type="text" formControlName="available_balance">
+    </div>
+
+    <div class="form-row">
+      <label>Account Number</label>
+      <input type="text" formControlName="account_number">
+    </div>
+
+    <div class="form-row">
+      <label>City</label>
+      <input type="text" formControlName="city">
+    </div>
+
+    <div class="form-row">
+      <label>Profile Picture URL</label>
+      <input type="text" formControlName="profie_picture">
+    </div>
+
+    <div class="form-row">
+      <label>IFSC Code</label>
+      <input type="text" formControlName="ifsc_code">
+    </div>
+
+    <div class="form-row">
+      <label>Account ID</label>
+      <input type="text" formControlName="id">
+    </div>
+
+    <div class="form-actions">
+      <button type="submit()">Submit</button>
+    </div>
+
+  </form>
+
+</div>
