@@ -4,8 +4,11 @@
 <button (click)="register()">register</button>
 <h1>registared users</h1>
 
+
+
 <ol>
-    <li *ngFor= "let user of users; let i=index">{{user}}
-         <button (click)="delete(i)">delete</button>
+    <li *ngFor="let user of users;let i=index">{{user}}
+        <button (click)="delete(i)">delete</button>
+
     </li>
-</ol> 
+</ol>

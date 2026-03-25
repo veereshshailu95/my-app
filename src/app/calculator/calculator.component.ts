@@ -22,4 +22,10 @@ mul(){
 div(){
   this.result=this.num1/this.num2
 }
+
+
 }
+
+
+
+

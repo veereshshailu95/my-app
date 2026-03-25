@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class DataBindingComponent {
 
+  show=true;   //[("",0 )this two are gives the  content is don't show this]
 }

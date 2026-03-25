@@ -5,7 +5,6 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { CalculatorComponent } from './calculator/calculator.component';
 import { HomeComponent } from './home/home.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
-import { RectangleComponent } from './rectangle/rectangle.component';
 import { CircleComponent } from './circle/circle.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { EventRegistrationComponent } from './event-registration/event-registration.component';
@@ -29,6 +28,8 @@ import { ViewStudentComponent } from './view-student/view-student.component';
 import { CreatStudentComponent } from './creat-student/creat-student.component';
 import { ViewAccountsComponent } from './view-accounts/view-accounts.component';
 import { CreateAccountsComponent } from './create-accounts/create-accounts.component';
+import { RectangleComponent } from './rectangle/rectangle.component';
+import { FormComponent } from './form/form.component';
 
 
 
@@ -65,6 +66,7 @@ const routes: Routes = [
     {path:'view-accounts/:id',component:ViewAccountsComponent},
     {path:'create-accounts/:id',component:CreateAccountsComponent},
     {path:'creat-accounts',component:CreateAccountsComponent},
+    {path:'form',component:FormComponent},
 
     {path:'payment',loadChildren:()=>import('./payment/payment.module').then(m=>m.PaymentModule)},
     {path:'movies',loadChildren:()=>import('./movies/movies.module').then(m=>m.MoviesModule)}

@@ -18,8 +18,9 @@ Area(){
 }
 
 paramitor(){
-  this.result=2*(this.num1+this.num2)
+  this.result=2*(this.num1+this.num2);
 }
 
 
 }
+

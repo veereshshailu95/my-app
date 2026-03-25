@@ -1,0 +1,108 @@
+<h1>form</h1>
+<form [formGroup]="userForm" (ngSubmit)="submit()">
+    <!-- <label for="">id:</label>
+    <input type="" formControlName="id"><br> -->
+
+     <label for="">title:</label>
+    <input type="text" formControlName="title"><br>
+
+     <label for="">description:</label>
+    <input type="text" formControlName="description"><br>
+
+     <label for="">category:</label>
+    <input type="text" formControlName="category"><br>
+
+     <label for="">price:</label>
+    <input type="text" formControlName="price"><br>
+
+     <label for="">discountPercentage:</label>
+    <input type="text" formControlName="discountPercentage"><br>
+
+     <label for="">rating:</label>
+    <input type="text" formControlName="rating"><br>
+
+     <label for="">stock:</label>
+    <input type="text" formControlName="stock"><br>
+
+    <label for="">tags:</label>
+    <input type="radio" name="tags" formControlName="tags" value="beauty">
+    <label for="">beauty:</label>
+    <input type="radio" name="tags" formControlName="tags" value="mascara">
+    <label for="">mascara:</label><br><br>
+
+    
+
+    <div *ngIf="userForm.get('tags')?.value == 'beauty'">
+        <label for="">beauty:</label>
+        <input type="text" formControlName="beauty">
+    </div>
+
+
+
+    <div *ngIf="userForm.get('tags')?.value == 'mascara'">
+        <label for="">mascara:</label>
+        <input type="text" formControlName="mascara">
+    </div>
+
+
+
+    <div formGroupName="dimensions">
+    <label for="">width:</label>
+    <input type="text" formControlName="width"><br>
+
+    <label for="">height:</label>
+    <input type="text" formControlName="height"><br>
+
+    <label for="">depth:</label>
+    <input type="text" formControlName="depth"><br>
+
+    </div>
+
+    <label for="">warrantyInformation:</label>
+    <input type="text" formControlName="warrantyInformation"><br>
+
+    <label for="">shippingInformation:</label>
+    <input type="text" formControlName="shippingInformation"><br>
+
+    <label for="">availabilityStatus:</label>
+    <input type="text" formControlName="availabilityStatus"><br>
+
+
+    <label for="">reviews:</label>
+    <button type="button" (click)="addreviews()">Add reviews</button>
+
+    <div formArrayName="reviews">
+        <div *ngFor="let review of reviewsFormArray.controls;let i=index">
+            <div formGroupName="{{i+1}}">
+                <h1>{{i+1}}</h1>
+                <label for="">rating:</label>
+                <input type="text" formControlName="rating"><br>
+
+                <label for="">comment:</label>
+                <input type="text" formControlName="comment"><br>
+
+                <label for="">date:</label>
+                <input type="text" formControlName="date"><br>
+
+                <label for="">reviewerName:</label>
+                <input type="text" formControlName="reviewerName"><br>
+
+                <label for="">reviewerEmail:</label>
+                <input type="text"formControlName="reviewerEmail"><br>
+
+                <button (click)="delete(i)">delete</button>
+
+
+
+            </div>
+
+        </div>
+
+    </div>
+    <input class="btn" type="submit" >
+
+
+
+
+
+</form>

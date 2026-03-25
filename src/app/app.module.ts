@@ -1,4 +1,4 @@
-import { createComponent, NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -10,7 +10,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CalculatorComponent } from './calculator/calculator.component';
 import { HomeComponent } from './home/home.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
-import { RectangleComponent } from './rectangle/rectangle.component';
 import { CircleComponent } from './circle/circle.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { EventRegistrationComponent } from './event-registration/event-registration.component';
@@ -40,6 +39,8 @@ import { CreatStudentComponent } from './creat-student/creat-student.component';
 import { ViewAccountsComponent } from './view-accounts/view-accounts.component';
 import { CreateAccountsComponent } from './create-accounts/create-accounts.component';
 import { TokenInterceptor } from './token.interceptor';
+import { RectangleComponent } from './rectangle/rectangle.component';
+import { FormComponent } from './form/form.component';
 
 
 
@@ -51,7 +52,6 @@ import { TokenInterceptor } from './token.interceptor';
     CalculatorComponent,
     HomeComponent,
     DataBindingComponent,
-    RectangleComponent,
     CircleComponent,
     DirectivesComponent,
     EventRegistrationComponent,
@@ -72,12 +72,14 @@ import { TokenInterceptor } from './token.interceptor';
     StudentsComponent,
     CreateUserComponent,
     CreateVehicleComponent,
-    AllpracticeComponent,
     ViewVehicleComponent,
     ViewStudentComponent,
     CreatStudentComponent,
     ViewAccountsComponent,
-    CreateAccountsComponent
+    CreateAccountsComponent,
+    AllpracticeComponent,
+    RectangleComponent,
+    FormComponent
    
     
   ],

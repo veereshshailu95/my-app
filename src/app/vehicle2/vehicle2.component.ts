@@ -13,6 +13,8 @@ export class Vehicle2Component {
   order:string="";
   page:number=1;
 
+  
+
   totalvehicle: Vehicle[] = [];
 
   constructor(private vehicle: VehiclesService) {
