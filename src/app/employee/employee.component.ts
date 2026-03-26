@@ -12,6 +12,8 @@ export class EmployeeComponent {
   exp:number=0;
   role:string="";
 
+
+
   employees:any = [
   { name: "Rahul Sharma", company: "Infosys", package: "12 LPA", exp: 3, role: "Frontend Developer" },
   { name: "Anita Reddy", company: "TCS", package: "10 LPA", exp: 2, role: "Angular Developer" },
@@ -56,6 +58,7 @@ export class EmployeeComponent {
         return employee;
       })
     }
+    
     add1(){
        this.employees=this.employees.map((employee:any) =>{
         employee.exp++;

@@ -1,0 +1,19 @@
+<!-- <p>parent works!</p> -->
+<h1>b in parent:{{bp}}</h1>
+
+
+<label for="">A in parent:</label>
+<input type="text" [(ngModel)]="ap">
+
+
+
+<app-child [ac]="ap" (bEvent)="update($event)"></app-child>
+
+<!-- <button [disabled]="true" (click)="submit()"></button> -->
+ <!-- <app-rating [rating]="3" (ratingChange)="updateRating($event)"></app-rating> -->
+
+   <app-rating [rating]="3">out of 5</app-rating>
+   <app-textarea></app-textarea>
+
+
+

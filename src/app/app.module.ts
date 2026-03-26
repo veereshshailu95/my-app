@@ -41,6 +41,10 @@ import { CreateAccountsComponent } from './create-accounts/create-accounts.compo
 import { TokenInterceptor } from './token.interceptor';
 import { RectangleComponent } from './rectangle/rectangle.component';
 import { FormComponent } from './form/form.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
+import { RatingComponent } from './rating/rating.component';
+import { TextareaComponent } from './textarea/textarea.component';
 
 
 
@@ -79,7 +83,11 @@ import { FormComponent } from './form/form.component';
     CreateAccountsComponent,
     AllpracticeComponent,
     RectangleComponent,
-    FormComponent
+    FormComponent,
+    ParentComponent,
+    ChildComponent,
+    RatingComponent,
+    TextareaComponent
    
     
   ],

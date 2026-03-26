@@ -30,6 +30,8 @@ import { ViewAccountsComponent } from './view-accounts/view-accounts.component';
 import { CreateAccountsComponent } from './create-accounts/create-accounts.component';
 import { RectangleComponent } from './rectangle/rectangle.component';
 import { FormComponent } from './form/form.component';
+import { ParentComponent } from './parent/parent.component';
+import { RatingComponent } from './rating/rating.component';
 
 
 
@@ -67,6 +69,8 @@ const routes: Routes = [
     {path:'create-accounts/:id',component:CreateAccountsComponent},
     {path:'creat-accounts',component:CreateAccountsComponent},
     {path:'form',component:FormComponent},
+    {path:'parent',component:ParentComponent},
+    {path:'rating',component:RatingComponent},
 
     {path:'payment',loadChildren:()=>import('./payment/payment.module').then(m=>m.PaymentModule)},
     {path:'movies',loadChildren:()=>import('./movies/movies.module').then(m=>m.MoviesModule)}
