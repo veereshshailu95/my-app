@@ -14,6 +14,12 @@ export class VehiclesService {
     return this.httpClient.get<Vehicle[]>(this.baseUrl+"?ass lo lo innalimit=10&page=1")  //[get ni vehicle ni API nunchi thisukodaniki use chestharu]
   }
 
+// getvehicle(){
+// return this.httpclient.get("https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction/+id")}
+
+
+
+
   getvehicl(id:string):Observable<Vehicle>{
     return this.httpClient.get<Vehicle>(this.baseUrl+"/"+id)  //[get ni vehicle ni API nunchi thisukodaniki use chestharu]
   }
@@ -54,7 +60,6 @@ export class VehiclesService {
 
 
 //?filter=+term+"&sortby="+column+"&order="+order+"&limit=10&page="+page;
-//constractor(prevate httpclient:HttpClient){ }
-//getvehicle(){
-//return this.httpclient.get("https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction/")}
-//
+//  constractor(prevate httpclient:HttpClient){ }
+// getvehicle(){
+//  return this.httpclient.get("https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction/")}

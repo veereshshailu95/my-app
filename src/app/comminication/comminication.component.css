@@ -1,0 +1,20 @@
+.parent{
+    width:100%;
+    height:100vh;
+    background-color: burlywood;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:20px;
+}
+.cal{
+    width:50%;
+    height:80%;
+    background-color: aquamarine;
+}
+
+.summ{
+    width:40%;
+    height:80%;
+    background-color: rgb(55, 219, 80);
+}

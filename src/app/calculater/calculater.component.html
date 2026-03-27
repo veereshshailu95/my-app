@@ -1,0 +1,11 @@
+<p>calculater works!</p>
+<div class="cal">
+        <h1>Calculator</h1>
+        <label for="">num1:</label>
+        <input type="number" [(ngModel)]="num1" ><br>
+
+        <label for="">num2:</label>
+        <input type="number"  [(ngModel)]="num2"><br>
+        <h3>Result:{{result}}</h3>
+</div>
+<app-action [num1]="num1" [num2]="num2" (bEvent)="getresult($event)"></app-action>

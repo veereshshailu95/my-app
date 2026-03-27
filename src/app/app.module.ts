@@ -45,6 +45,13 @@ import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
 import { RatingComponent } from './rating/rating.component';
 import { TextareaComponent } from './textarea/textarea.component';
+import { ItemsComponent } from './items/items.component';
+import { NavComponent } from './nav/nav.component';
+import { CartComponent } from './cart/cart.component';
+import { CalculaterComponent } from './calculater/calculater.component';
+import { SummaryComponent } from './summary/summary.component';
+import { ComminicationComponent } from './comminication/comminication.component';
+import { ActionComponent } from './action/action.component';
 
 
 
@@ -87,7 +94,14 @@ import { TextareaComponent } from './textarea/textarea.component';
     ParentComponent,
     ChildComponent,
     RatingComponent,
-    TextareaComponent
+    TextareaComponent,
+    ItemsComponent,
+    NavComponent,
+    CartComponent,
+    CalculaterComponent,
+    SummaryComponent,
+    ComminicationComponent,
+    ActionComponent
    
     
   ],

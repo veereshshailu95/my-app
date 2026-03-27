@@ -32,6 +32,10 @@ import { RectangleComponent } from './rectangle/rectangle.component';
 import { FormComponent } from './form/form.component';
 import { ParentComponent } from './parent/parent.component';
 import { RatingComponent } from './rating/rating.component';
+import { ItemsComponent } from './items/items.component';
+import { NavComponent } from './nav/nav.component';
+import { CartComponent } from './cart/cart.component';
+import { ComminicationComponent } from './comminication/comminication.component';
 
 
 
@@ -71,6 +75,10 @@ const routes: Routes = [
     {path:'form',component:FormComponent},
     {path:'parent',component:ParentComponent},
     {path:'rating',component:RatingComponent},
+    {path:'items',component:ItemsComponent},
+    {path:'nav',component:NavComponent},
+    {path:'cart',component:CartComponent},
+    {path:'comminication',component:ComminicationComponent},
 
     {path:'payment',loadChildren:()=>import('./payment/payment.module').then(m=>m.PaymentModule)},
     {path:'movies',loadChildren:()=>import('./movies/movies.module').then(m=>m.MoviesModule)}
