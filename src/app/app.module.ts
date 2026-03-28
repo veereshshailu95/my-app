@@ -52,6 +52,12 @@ import { CalculaterComponent } from './calculater/calculater.component';
 import { SummaryComponent } from './summary/summary.component';
 import { ComminicationComponent } from './comminication/comminication.component';
 import { ActionComponent } from './action/action.component';
+import { CommunicationtwoComponent } from './communicationtwo/communicationtwo.component';
+import { CalcularetwoComponent } from './calcularetwo/calcularetwo.component';
+import { SummarytwoComponent } from './summarytwo/summarytwo.component';
+import { ActiontwoComponent } from './actiontwo/actiontwo.component';
+
+
 
 
 
@@ -101,7 +107,14 @@ import { ActionComponent } from './action/action.component';
     CalculaterComponent,
     SummaryComponent,
     ComminicationComponent,
-    ActionComponent
+    ActionComponent,
+    CommunicationtwoComponent,
+    CalcularetwoComponent,
+    SummarytwoComponent,
+    ActiontwoComponent,
+  
+  
+    
    
     
   ],

@@ -36,6 +36,9 @@ import { ItemsComponent } from './items/items.component';
 import { NavComponent } from './nav/nav.component';
 import { CartComponent } from './cart/cart.component';
 import { ComminicationComponent } from './comminication/comminication.component';
+import { CommunicationComponent } from './circle/communication/communication.component';
+import { CommunicationtwoComponent } from './communicationtwo/communicationtwo.component';
+
 
 
 
@@ -79,9 +82,11 @@ const routes: Routes = [
     {path:'nav',component:NavComponent},
     {path:'cart',component:CartComponent},
     {path:'comminication',component:ComminicationComponent},
+    {path:'communicationtwo',component:CommunicationtwoComponent},
+   
 
     {path:'payment',loadChildren:()=>import('./payment/payment.module').then(m=>m.PaymentModule)},
-    {path:'movies',loadChildren:()=>import('./movies/movies.module').then(m=>m.MoviesModule)}
+    {path:'movies',loadChildren:()=>import('./movies/movies.module').then(m=>m.MoviesModule)},
     
     ]
   },

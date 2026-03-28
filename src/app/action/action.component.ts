@@ -14,6 +14,7 @@ export class ActionComponent {
  
     @Output() bEvent:EventEmitter<number>=new EventEmitter();
     sum(){
+      
       const sum=Number(this.num1)+Number(this.num2);
       this.bEvent.emit(sum);
     }
